@@ -34,7 +34,47 @@ body{
 
 }
 
+.sesbari{
+    
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    background-image: url(ses.png);
+    background-repeat: no-repeat;           
+    background-size: cover;                
+    background-position: center;           
+    background-attachment: fixed;
+    
+
+}
+
+.sesfoto{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    background-repeat: no-repeat;            
+    background-position: center;           
+    background-attachment: fixed;
+    border: none;
+    z-index: 0;
+    position: absolute;
+}
+
+.sesfoto:active{
+    transform: scale(0.95);
+}
+    
+
+
 .foto{
+    display: flex;
     background-image: url(1.png);
     width: 90%;
     height: 90%;
@@ -43,6 +83,8 @@ body{
     background-attachment: fixed;
     border: none;
     transform: scale(0.95);
+    z-index: 0;
+    position: absolute;
 }
 
 .foto:active{
@@ -72,6 +114,36 @@ body{
     font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
+}
+
+.hareketli-resim {
+  align-items: start;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  width: 100px;
+  transition: transform 0.1s ease; 
+  animation: xkaydirma 1s infinite alternate;
+  animation: ykaydirma 1s infinite alternate;
+}
+
+@keyframes xkaydirma {
+  from {
+    transform: translateX(0); 
+  }
+  to {
+    transform: translateX(20px); 
+    
+  }
+}
+@keyframes ykaydirma {
+  from {
+    transform: translateY(0); 
+  }
+  to {
+    transform: translateY(150px); 
+    
+  }
 }
 
 
